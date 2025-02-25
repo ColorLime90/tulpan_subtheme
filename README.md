@@ -1,0 +1,2 @@
+# tulpan_subtheme
+ 
