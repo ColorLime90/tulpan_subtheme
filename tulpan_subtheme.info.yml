@@ -1,6 +1,6 @@
 name: tulpan_subtheme
 type: theme
-description: 'Har ska det anpassas!'
+description: 'Här ska det anpassas!'
 core_version_requirement: ^10.3 || ^11
 base theme: bootstrap_barrio
 

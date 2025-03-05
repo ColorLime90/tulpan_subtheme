@@ -1,9 +1,17 @@
+#  gullig:
+#    css:
+#      theme:
+#        css/gullig.css: {}
+#    js:
+#      js/gullig.js: {}
+
 global-styling:
   version: VERSION
   js:
-    js/global.js: {}
+    js/global.js: {}  # Innan var denna js/global.js: {}
   css:
     component:
+      # css/layout.css: {}  # Denna la jag till
       css/style.css: {}
       css/colors.css: {}
 bootstrap:

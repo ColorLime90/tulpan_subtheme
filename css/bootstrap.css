@@ -1,9 +1,4 @@
-/**
- * @file
- * Subtheme specific CSS.
- */
- 
- :root {
+:root {
   --blue: #007bff;
   --indigo: #6610f2;
   --purple: #593196;
