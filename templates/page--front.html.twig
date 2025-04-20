@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="{{ language.getId() }}">
+  <head>
+    <head-placeholder token="{{ placeholder_token }}">
+    <title>{{ head_title|safe_join(' | ') }}</title>
+    <css-placeholder token="{{ placeholder_token }}">
+    <js-placeholder token="{{ placeholder_token }}">
+  </head>
+
+
+
+  <body{{ attributes.addClass('tulip-theme') }}>
+    
+   {# <a href="#main-content" class="visually-hidden focusable">Skip to main content</a> #}
+
+{% if not logged_in %}
+  <div class="text-end pe-4">
+    <a href="{{ path('user.login') }}" class="btn btn-outline-primary">
+      Logga in
+    </a>
+  </div>
+{% endif %}
+
+{% if logged_in %}
+  <a href="/admin" class="btn btn-secondary">Gå till admin</a>
+{% endif %}
+
+
+
+    <header class="container py-5 text-center">
+      <h1 class="display-3 fw-bold text-primary">Välkommen till Tulpan 🌷</h1>
+      <p class="lead text-secondary">Utforska skönheten och enkelheten i denna förbannade blomsterinspirerade indexsidan.</p>
+    </header>
+
+    <main id="main-content" class="container my-5">
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm border-0">
+            <div class="card-body">
+              <h5 class="card-title text-primary">Plantera Idéer</h5>
+              <p class="card-text">Starte din kreativa resa genom att klicka på denna förhoppningsvis fungerande länken!</p>
+              <a href="{{ path('view.all_content.page_1') }}" class="btn btn-outline-primary">hjalp mig ä</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm border-0">
+            <div class="card-body">
+              <h5 class="card-title text-primary">Digitala Tulpaner</h5>
+              <p class="card-text">Utforska vår samling digital konst inspirerad av tulpanens färger.</p>
+              <a href="#" class="btn btn-outline-primary">Se galleri</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm border-0">
+            <div class="card-body">
+              <h5 class="card-title text-primary">Gemenskap</h5>
+              <p class="card-text">Anslut med andra entusiaster och dela dina blomstrande idéer.</p>
+              <a href="#" class="btn btn-outline-primary">Gå med</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <section class="container my-5">
+          <h2 class="text-center text-primary">Vackra Tulpanplatser</h2>
+
+          <div class="d-flex justify-content-center">
+            <div class="leaflet-map-maxwidth">
+              {{ drupal_view('c', 'block_1') }}
+            </div>
+          </div>
+      </section>
+
+
+
+
+    </main>
+
+    <footer class="text-center py-5 mt-5 bg-white border-top">
+      <p class="text-muted mb-0">© {{ "now"|date("Y") }} Tulpan Subtheme. All rights reserved.</p>
+    </footer>
+
+    <js-bottom-placeholder token="{{ placeholder_token }}">
+  </body>
+</html>

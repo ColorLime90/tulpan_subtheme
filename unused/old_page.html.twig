@@ -71,209 +71,6 @@
  */
 #}
 {# see https://www.drupal.org/project/drupal/issues/953034#comment-14192130 #}
-
-
-
-{% extends "@bootstrap_barrio/layout/page.html.twig" %}
-
-{% block content %}
-  <!-- Home Page Banner Section -->
-  <div class="container-fluid bg-primary text-white py-5">
-    <div class="container">
-      <h1 class="display-4">Welcome to Our Website!</h1>
-      <p class="lead">This is a custom home page with Bootstrap integration.</p>
-    </div>
-  </div>
-
-  <!-- Main Content Section -->
-  <div class="container mt-4">
-    <div class="row">
-      <!-- Featured Content -->
-      <div class="col-lg-8">
-        <section class="featured-content">
-          <h2 class="h3">Featured Content</h2>
-          <p>Here's some custom content that will be displayed on the homepage.</p>
-          {{ page.featured_top }} <!-- Example of a custom page region -->
-        </section>
-      </div>
-
-      <!-- Sidebar -->
-      <div class="col-lg-4">
-        {% if sidebar_first_exists %}
-          <div class="sidebar">
-            <h3 class="h4">Sidebar Content</h3>
-            {{ page.sidebar_first }} <!-- Sidebar content -->
-          </div>
-        {% endif %}
-      </div>
-    </div>
-  </div>
-
-  <!-- Feature Cards Section -->
-  <div class="container mt-5">
-    <h2 class="text-center mb-4">Our Features</h2>
-    <div class="row">
-      <!-- Feature 1 -->
-      <div class="col-md-6 mb-4">
-        <div class="card">
-          <img src="{{ base_path }}themes/custom/your_subtheme/images/feature1.jpg" class="card-img-top" alt="Feature 1">
-          <div class="card-body">
-            <h5 class="card-title">Feature One</h5>
-            <p class="card-text">This is the first feature on the homepage.</p>
-            <a href="#" class="btn btn-primary">Learn More</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Feature 2 -->
-      <div class="col-md-6 mb-4">
-        <div class="card">
-          <img src="{{ base_path }}themes/custom/your_subtheme/images/feature2.jpg" class="card-img-top" alt="Feature 2">
-          <div class="card-body">
-            <h5 class="card-title">Feature Two</h5>
-            <p class="card-text">This is the second feature on the homepage.</p>
-            <a href="#" class="btn btn-primary">Learn More</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Footer Section -->
-  <div class="container mt-5">
-    <div class="row py-5">
-      <div class="col-md-3">
-        <h5>About Us</h5>
-        <p>Information about your website or company.</p>
-      </div>
-      <div class="col-md-3">
-        <h5>Quick Links</h5>
-        <ul class="list-unstyled">
-          <li><a href="/about">About Us</a></li>
-          <li><a href="/contact">Contact</a></li>
-          <li><a href="/privacy-policy">Privacy Policy</a></li>
-        </ul>
-      </div>
-      <div class="col-md-3">
-        <h5>Follow Us</h5>
-        <ul class="list-unstyled">
-          <li><a href="#">Facebook</a></li>
-          <li><a href="#">Twitter</a></li>
-          <li><a href="#">Instagram</a></li>
-        </ul>
-      </div>
-      <div class="col-md-3">
-        <h5>Contact Info</h5>
-        <p>Email: contact@yourwebsite.com</p>
-        <p>Phone: 123-456-7890</p>
-      </div>
-    </div>
-  </div>
-{% endblock %}
-
-{% extends "@bootstrap_barrio/layout/page.html.twig" %}
-
-{% block content %}
-  <!-- Home Page Banner Section -->
-  <div class="container-fluid bg-primary text-white py-5">
-    <div class="container">
-      <h1 class="display-4">Welcome to Our Website!</h1>
-      <p class="lead">This is a custom home page with Bootstrap integration.</p>
-    </div>
-  </div>
-
-  <!-- Main Content Section -->
-  <div class="container mt-4">
-    <div class="row">
-      <!-- Featured Content -->
-      <div class="col-lg-8">
-        <section class="featured-content">
-          <h2 class="h3">Featured Content</h2>
-          <p>Here's some custom content that will be displayed on the homepage.</p>
-          {{ page.featured_top }} <!-- Example of a custom page region -->
-        </section>
-      </div>
-
-      <!-- Sidebar -->
-      <div class="col-lg-4">
-        {% if sidebar_first_exists %}
-          <div class="sidebar">
-            <h3 class="h4">Sidebar Content</h3>
-            {{ page.sidebar_first }} <!-- Sidebar content -->
-          </div>
-        {% endif %}
-      </div>
-    </div>
-  </div>
-
-  <!-- Feature Cards Section -->
-  <div class="container mt-5">
-    <h2 class="text-center mb-4">Our Features</h2>
-    <div class="row">
-      <!-- Feature 1 -->
-      <div class="col-md-6 mb-4">
-        <div class="card">
-          <img src="{{ base_path }}themes/custom/your_subtheme/images/feature1.jpg" class="card-img-top" alt="Feature 1">
-          <div class="card-body">
-            <h5 class="card-title">Feature One</h5>
-            <p class="card-text">This is the first feature on the homepage.</p>
-            <a href="#" class="btn btn-primary">Learn More</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Feature 2 -->
-      <div class="col-md-6 mb-4">
-        <div class="card">
-          <img src="{{ base_path }}themes/custom/your_subtheme/images/feature2.jpg" class="card-img-top" alt="Feature 2">
-          <div class="card-body">
-            <h5 class="card-title">Feature Two</h5>
-            <p class="card-text">This is the second feature on the homepage.</p>
-            <a href="#" class="btn btn-primary">Learn More</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Footer Section -->
-  <div class="container mt-5">
-    <div class="row py-5">
-      <div class="col-md-3">
-        <h5>About Us</h5>
-        <p>Information about your website or company.</p>
-      </div>
-      <div class="col-md-3">
-        <h5>Quick Links</h5>
-        <ul class="list-unstyled">
-          <li><a href="/about">About Us</a></li>
-          <li><a href="/contact">Contact</a></li>
-          <li><a href="/privacy-policy">Privacy Policy</a></li>
-        </ul>
-      </div>
-      <div class="col-md-3">
-        <h5>Follow Us</h5>
-        <ul class="list-unstyled">
-          <li><a href="#">Facebook</a></li>
-          <li><a href="#">Twitter</a></li>
-          <li><a href="#">Instagram</a></li>
-        </ul>
-      </div>
-      <div class="col-md-3">
-        <h5>Contact Info</h5>
-        <p>Email: contact@yourwebsite.com</p>
-        <p>Phone: 123-456-7890</p>
-      </div>
-    </div>
-  </div>
-{% endblock %}
-
-
-
-{#
-
-
-
 {% set sidebar_first_exists = page.sidebar_first|render|striptags('<img><video><audio><drupal-render-placeholder>')|trim is not empty %}
 {% set sidebar_second_exists = page.sidebar_second|render|striptags('<img><video><audio><drupal-render-placeholder>')|trim is not empty %}
 
@@ -320,10 +117,6 @@
         </nav>
 {% endblock %}
 
-
-
-
-
 {% block content %}
         <div id="main" class="{{ container }}">
           {{ page.breadcrumb }}
@@ -352,9 +145,6 @@
         </div>
 {% endblock %}
 
-
-
-
 {% block footer %}
         <div class="{{ container }}">
           {% if page.footer_first or page.footer_second or page.footer_third or page.footer_fourth %}
@@ -372,6 +162,3 @@
           {% endif %}
         </div>
 {% endblock %}
-
-
-#}
